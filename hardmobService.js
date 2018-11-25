@@ -3,14 +3,13 @@ const cheerio = require("cheerio");
 
 async function getPromotions() {
   try {
-    const { data } = await axios.get(
-      "https://www.hardmob.com.br/forums/407-Promocoes"
-    );
+    const urlPrefix = "https://www.hardmob.com.br/";
+
+    const { data } = await axios.get(`${urlPrefix}/forums/407-Promocoes`);
 
     const $ = cheerio.load(data);
 
     const products = [];
-    const urlPrefix = "https://www.hardmob.com.br/";
 
     $("#threads > li").each(function(i, elem) {
       const el = $(this)
@@ -34,7 +33,6 @@ async function getPromotions() {
   }
 }
 
-// getPromotions();
 module.exports = {
   getPromotions
 };
