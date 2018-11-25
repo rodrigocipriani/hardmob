@@ -2,8 +2,12 @@
   "name": "hardmob",
   "version": "1.0.0",
   "description": "",
-  "main": "index.js",
+  "engines": {
+    "node": "10.12.0"
+  },
   "scripts": {
+    "start": "node index.js",
+    "dev": "nodemon index.js",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "author": "",
@@ -11,6 +15,8 @@
   "dependencies": {
     "axios": "^0.18.0",
     "cheerio": "^1.0.0-rc.2",
+    "express": "^4.16.4",
+    "nodemon": "^1.18.6",
     "qs": "^6.6.0"
   }
 }
