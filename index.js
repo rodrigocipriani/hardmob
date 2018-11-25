@@ -1,7 +1,7 @@
 const express = require("express");
 const hardmobService = require("./hardmobService");
 
-const PORT = 80;
+const PORT = 3000;
 
 const app = express();
 
